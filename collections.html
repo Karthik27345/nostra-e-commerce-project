@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collections</title>
+
+    <!-- Font Awesome Cdn link -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+ <!-- Google font styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Young+Serif&display=swap" rel="stylesheet">
+
+<!-- Tailwind Css Cdn link -->
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+<!-- JavaScript Manipulation -->
+ <script src="collection.js" defer></script>
+</head>
+<body>
+      <!-- Discount bar -->
+    <section class="flex justify-center items-center gap-2 font-poppins font-semibold w-full text-[10px] md:text-xl " style="background-color: #1D232C;" id="discount">
+        <p class="text-white py-2 font-gabarito">Sign Up and  <span class="text-white font-extrabold font-poppins py-2" style="color: #E2E1E1;">Get 20% OFF</span> for your first order</p>
+        <p class="text-white ml-5  cursor-pointer" id="close">X</p>
+    </section>
+
+<!-- Navbar -->
+<section class="flex justify-between items-center  py-4 px-5 sticky top-0 z-10 bg-white">
+    <h1 class="font-bold text-4xl font-gabarito" style="color: #1D232C;">Nostra</h1>
+
+<div class="block md:hidden" id="menuicon">
+     <i class="fa-solid fa-bars text-2xl"></i>
+</div>
+   
+
+    <ul class="hidden md:flex justify-center items-center gap-10 text-gray-950 font-poppins">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#newarrival">New Arrival</a></li>
+        <li><a href="index.html#mostwanted">Most Wanted</a></li>
+        <li><a href="collections.html">Collections</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+</section>
+
+<!-- Side Navbar -->
+<section style="background-color: #1D232C; width: 50%; height: 100vh; left: -50%;" class="fixed z-20 top-0 transition-all duration-1000" id="sidenav">
+  <div class="text-right text-white p-5 cursor-pointer" id="closer">
+<p>X</p>
+  </div>
+   <ul class="flex flex-col justify-center items-center gap-10 font-poppins text-white">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#newarrival">New Arrival</a></li>
+        <li><a href="index.html#mostwanted">Most Wanted</a></li>
+        <li><a href="collections.html">Collections</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+</section>
+
+<section class="flex gap-6 p-6">
+
+
+  <div class="w-[100px] border-r border-r-3  pr-4 space-y-6 md:w-[25%]">
+
+    <div class="md:text-3xl">
+      <h2 class="font-bold mb-2">Occasion</h2>
+      <label class="flex items-center gap-2"><input type="checkbox" id="summer"> Summer</label>
+      <label class="flex items-center gap-2"><input type="checkbox" id="party"> Party</label>
+      <label class="flex items-center gap-2"><input type="checkbox" id="beach"> Beach</label>
+    </div>
+
+    <div class="md:text-3xl">
+      <h2 class="font-bold mb-2">Colors</h2>
+      <label class="flex items-center gap-2"><input type="checkbox" id="red"> Red</label>
+      <label class="flex items-center gap-2"><input type="checkbox" id="blue"> Blue</label>
+      <label class="flex items-center gap-2"><input type="checkbox" id="white"> White</label>
+      <label class="flex items-center gap-2"><input type="checkbox" id="green"> Green</label>
+    </div>
+
+    <div class="md:text-3xl">
+      <h2 class="font-bold mb-2">Arrivals</h2>
+      <label class="flex items-center gap-2"><input type="checkbox" id="new"> New</label>
+      <label class="flex items-center gap-2"><input type="checkbox" id="old"> Old</label>
+    </div>
+
+  </div>
+
+
+  <div class="flex-1">
+
+  <div class="flex justify-between items-center w-full border rounded-full px-4 py-2 mb-6">
+    <input type="text"
+           placeholder="search" class="outline-none">
+
+        <i class="fa-solid fa-magnifying-glass"></i>
+  </div>
+    
+
+   
+    <div class="grid grid-cols-3 gap-6">
+    <div class="product"
+    data-occasion="party"
+    data-color="blue"
+    data-arrival="new">
+        <img src="./images/f1.jpg" alt="">
+        <p class="font-bold truncate text-[10px] font-poppins md:text-3xl">Shirt Party Red</p>
+        <p class="text-[5px] md:text-xl">₹220</p>
+    </div>
+    
+
+
+      <div class="product"
+    data-occasion="summer"
+    data-color="red"
+    data-arrival="old">
+        <img src="./images/n8.jpg" alt="">
+        <p class="font-bold truncate text-[10px] font-poppins md:text-2xl">Floral Summer Shirt</p>
+        <p class="text-[5px] md:text-xl">₹220</p>
+    </div>
+    
+
+
+
+      <div class="product"
+    data-occasion="summer"
+    data-color="green"
+    data-arrival="old">
+        <img src="./images/n7.jpg" alt="">
+        <p class="font-bold truncate text-[10px] font-poppins md:text-2xl "> Summer Green</p>
+        <p class="text-[5px] md:text-xl">₹220</p>
+    </div>
+    
+
+
+      <div class="product"
+    data-occasion="party"
+    data-color="white"
+    data-arrival="new">
+        <img src="./images/n8.jpg" alt="">
+        <p class="font-bold truncate text-[10px] font-poppins md:text-2xl">Party Floral Shirt</p>
+        <p class="text-[5px] md:text-xl">₹220</p>
+    </div>
+
+
+      <div class="product"
+    data-occasion="beach"
+    data-color="green"
+    data-arrival="old">
+        <img src="./images/f3.jpg" alt="">
+        <p class="font-bold truncate text-[10px] font-poppins md:text-2xl">Floral Summer Shirt</p>
+        <p class="text-[5px] md:text-xl">₹220</p>
+    </div>
+    
+
+      <div class="product"
+    data-occasion="beach"
+    data-color="red"
+    data-arrival="old">
+        <img src="./images/n1.jpg" alt="">
+        <p class="font-bold truncate text-[10px] font-poppins md:text-2xl">Beach Shirt</p>
+        <p class="text-[5px] md:text-xl">₹220</p>
+    </div>
+
+
+       <div  class="product"
+    data-occasion="party"
+    data-color="blue"
+    data-arrival="new">
+        <img src="./images/f6.jpg" alt="">
+        <p class="font-bold truncate text-[10px] font-poppins md:text-2xl"> Shirt Party Red</p>
+        <p class="text-[5px] md:text-xl">₹220</p>
+    </div>
+
+
+       <div  class="product"
+    data-occasion="summer"
+    data-color="white"
+    data-arrival="new">
+        <img src="./images/n0.jpg" alt="">
+        <p class="font-bold truncate text-[10px] font-poppins md:text-2xl">Floral Shirt</p>
+        <p class="text-[5px] md:text-xl">₹220</p>
+    </div>
+
+
+       <div  class="product"
+    data-occasion="beach"
+    data-color="green"
+    data-arrival="new">
+        <img src="./images/f1.jpg" alt="">
+        <p class="font-bold truncate text-[10px] font-poppins md:text-2xl">Style Shirt</p>
+        <p class="text-[5px] md:text-xl">₹220</p>
+    </div>
+
+
+
+    
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- News Letter -->
+
+<section class="mt-5 mr-4 flex flex-col justify-center items-center gap-3 font-poppins">
+   
+   <div>    <h1 class="font-bold text-xl text-center  font-gabarito md:text-[32px]">Join our News Letter</h1>
+    <p class="text-center text-[10px] font-poppins md:text-[32px] ">Signup for our email newspaper to get exclusive discounts, updates, and more</p>
+</div>
+
+    <input type="text" class="border-3 border-black px-5 py-2 w-4/5 ">
+    <button class="bg-black text-white p-2 rounded-xl text-[10px] md:text-[28px]" style="color: #E2E1E1;">Subscribe
+        <i class="fa-solid fa-arrow-right"></i>
+    </button>
+</section>
+
+
+<!-- Footer -->
+<section class="text-white text-[10px] font-gabarito flex flex-col justify-center gap-2 p-10 mt-5 md:text-[32px] md:gap-5" style="background-color: #1D232C; color: #E2E1E1;">
+   <div> 
+    <h1 class="text-lg font-bold md:text-[35px] md:font-extrabold">Nostra</h1>
+    <p>The Standard chunk of Lorem ipsum used since the 1500s is reprodused below for those interest</p>
+
+   </div>
+   
+   
+    <div class="flex gap-10">
+<i class="fa-brands fa-instagram"></i>
+<i class="fa-brands fa-twitter"></i>
+<i class="fa-brands fa-facebook"></i>
+
+    </div>
+    <p>@ 2023 Nostra.com</p>
+</section>
+</body>
+</html>

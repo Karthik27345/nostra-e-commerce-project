@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nostra</title>
+
+<!-- Font Awesome Cdn link -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+ <!-- Google font styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Young+Serif&display=swap" rel="stylesheet">
+
+<!-- Tailwind Css Cdn link -->
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+<!-- JavaScript Manipulation -->
+ <script src="script.js" defer></script>
+
+<body>
+
+
+
+
+  <!-- Discount bar -->
+    <section class="flex justify-center items-center gap-2 font-poppins font-semibold w-full text-[10px] md:text-xl " style="background-color: #1D232C;" id="discount">
+        <p class="text-white py-2 font-gabarito">Sign Up and  <span class="text-white font-extrabold font-poppins py-2" style="color: #E2E1E1;">Get 20% OFF</span> for your first order</p>
+        <p class="text-white ml-5  cursor-pointer" id="close">X</p>
+    </section>
+
+
+<style>
+  html{
+    scroll-behavior: smooth;
+  }
+</style>
+<!-- Navbar -->
+<section class="flex justify-between items-center  py-4 px-5 sticky top-0 z-10 bg-white">
+    <h1 class="font-bold text-4xl font-gabarito" style="color: #1D232C;">Nostra</h1>
+
+<div class="block md:hidden" id="menuicon">
+     <i class="fa-solid fa-bars text-2xl"></i>
+</div>
+   
+
+    <ul class="hidden md:flex justify-center items-center gap-10 text-gray-950 font-poppins">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#newarrival">New Arrival</a></li>
+        <li><a href="#mostwanted">Most Wanted</a></li>
+        <li><a href="collections.html">Collections</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+</section>
+
+
+<!-- Side Navbar -->
+<section style="background-color: #1D232C; width: 50%; height: 100vh; left: -50%;" class="fixed z-20 top-0 transition-all duration-1000" id="sidenav">
+  <div class="text-right text-white p-5 cursor-pointer" id="closer">
+<p>X</p>
+  </div>
+   <ul class="flex flex-col justify-center items-center gap-10 font-poppins text-white">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#newarrival">New Arrival</a></li>
+        <li><a href="#mostwanted">Most Wanted</a></li>
+        <li><a href="collections.html">Collections</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+</section>
+<!-- Slider Section -->
+<section class="px-5">
+  <div class="relative overflow-hidden rounded-3xl">
+
+    <!-- SLIDER WRAPPER -->
+    <div id="slider"
+      class="flex transition-transform duration-2000 ease-in-out">
+
+      <img src="./images/slider-one.jpg"
+           class="w-full h-[220px] md:h-[400px] object-cover flex-shrink-0">
+
+      <img src="./images/slider-one.jpg"
+           class="w-full h-[220px] md:h-[400px] object-cover flex-shrink-0">
+
+      <img src="./images/slider-one.jpg"
+           class="w-full h-[220px] md:h-[400px] object-cover flex-shrink-0">
+    </div>
+
+    <!-- LEFT ARROW -->
+    <button onclick="prevSlide()"
+      class="absolute left-4 top-1/2 -translate-y-1/2 text-white text-[150px]">
+      ‹
+    </button>
+
+    <!-- RIGHT ARROW -->
+    <button onclick="nextSlide()"
+      class="absolute right-4 top-1/2 -translate-y-1/2 text-white text-[150px]">
+      ›
+    </button>
+
+  </div>
+</section>
+
+<!-- Brands -->
+
+<section>
+
+  <div>
+  <h1 class="font-bold font-gabarito p-3 text-2xl">Brands</h1>
+</div>
+ 
+
+
+  <div class="flex justify-around items-center p-3 text-[10px] md:text-[30px] mb-10 ">
+ 
+<div class="text-[10px] md:text-[30px] md:flex flex-col items-center gap-2">
+ 
+ 
+
+<img src="https://cdn.simpleicons.org/puma/000000" class="h-8">
+
+
+  
+    <p>Puma</p>
+</div>
+
+
+
+<div class="flex flex-col items-center gap-2">
+<img src="https://cdn.simpleicons.org/adidas" alt="Adidas" class="h-8">
+ <p>Adidas</p>
+ </div>
+
+  
+ 
+<div class="text-center font-gabarito flex flex-col  justify-center items-center gap-2">
+<i class="fa-brands fa-behance text-[20px] md:text-[30px]"></i>
+<p>Behance</p>
+</div>
+ 
+ 
+<div class="flex flex-col items-center gap-2">
+ <i class="fa-brands fa-twitch text-[20px] md:text-[30px] font-poppins"></i>
+<p>Twitch</p>
+</div>
+
+<div class="text-[10px] md:text-[30px] md:flex flex-col items-center gap-2">
+ <img src="https://cdn.simpleicons.org/puma/000000" class="h-8 text-[20px]">
+    <p>Puma</p>
+</div>
+
+
+
+<div class="flex flex-col items-center gap-2">
+<img src="https://cdn.simpleicons.org/adidas" alt="Adidas" class="h-8">
+ <p>Adidas</p>
+ </div>
+
+  
+ 
+<div class="text-center font-gabarito flex flex-col  justify-center items-center gap-2">
+<i class="fa-brands fa-behance text-[20px] md:text-[30px]"></i>
+<p>Behance</p>
+</div>
+ 
+
+
+
+</div>
+
+  
+</section>
+
+<section class="px-5 mt-4">
+  <div class="flex justify-between items-center gap-10">
+    
+   
+    <div class="w-1/2 ">
+      <h1 class="font-bold text-[14px] leading-snug md:text-[32px]">
+        We Provide Best Customer Experiences
+      </h1>
+    </div>
+
+   
+    <div class="w-3/4">
+      <p class="text-[10px] whitespace-nowrap md:text-[28px]">
+        || We ensure that our customer have the best shopping experience
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<section class="flex justify-around items-start gap-4 px-4 mt-4 ">
+  
+  <div class="bg-[#F2F4F7] text-[10px] p-2 flex flex-col gap-1   rounded-md leading-snug w-[160px] md:w-[320px] md:p-4">
+    <i class="fa-solid fa-check text-[14px] md:text-[28px]"></i>
+    <p class="font-bold text-[11px] md:text-[22px]">Original products</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+  </div>
+
+  <div class="bg-[#F2F4F7] text-[10px] p-2 flex flex-col gap-1  rounded-md leading-snug w-[160px] md:w-[320px] md:p-4">
+    <i class="fa-regular fa-face-smile text-[14px] md:text-[28px]"></i>
+    <p class="font-bold text-[11px] md:text-[22px]">Satisfaction Guarantee</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+  </div>
+
+  <div class="bg-[#F2F4F7] text-[10px] p-2 flex flex-col gap-1  rounded-md leading-snug w-[160px] md:w-[320px] md:p-4">
+    <i class="fa-solid fa-paintbrush text-[14px] md:text-[28px]"></i>
+    <p class="font-bold text-[11px] md:text-[22px]">New Arrival Everyday</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+  </div>
+
+  <div class="bg-[#F2F4F7] text-[10px] p-2 flex flex-col gap-1  rounded-md leading-snug w-[160px] md:w-[320px] md:p-4">
+    <i class="fa-solid fa-truck text-[14px] md:text-[28px]"></i>
+    <p class="font-bold text-[11px] md:text-[22px]">Fast & Free Shipping</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+  </div>
+
+</section>
+
+
+
+<!-- New Arrivals -->
+<section class="p-3 mt-4" id="newarrival">
+  <h1 class="font-bold text-2xl mb-4">New Arrivals</h1>
+
+  <div class="flex justify-between items-center gap-3">
+
+   
+    <div class="relative w-[80px] h-[110px] sm:w-[120px] sm:h-[160px] md:w-[180px] md:h-[220px] lg:w-[260px] lg:h-[260px] lg:rounded-lg overflow-hidden">
+      <img src="./images/f1.jpg" class="w-full h-full object-cover" alt="">
+      <div class="absolute inset-0 bg-black/40"></div>
+      <button class="absolute inset-0 m-auto h-fit w-fit bg-white text-black px-2 py-1 text-[10px] sm:text-xs md:text-base rounded flex items-center gap-1 shadow">
+        Shop Now <i class="fa-solid fa-arrow-right"></i>
+      </button>
+    </div>
+
+    <div class="relative w-[80px] h-[110px] sm:w-[120px] sm:h-[160px] md:w-[180px] md:h-[220px] lg:w-[260px] lg:h-[260px] lg:rounded-lg overflow-hidden">
+      <img src="./images/f7.jpg" class="w-full h-full object-cover" alt="">
+      <div class="absolute inset-0 bg-black/40"></div>
+      <button class="absolute inset-0 m-auto h-fit w-fit bg-white text-black px-2 py-1 text-[10px] sm:text-xs md:text-base rounded flex items-center gap-1 shadow">
+        Shop Now <i class="fa-solid fa-arrow-right"></i>
+      </button>
+    </div>
+
+    <div class="relative w-[80px] h-[110px] sm:w-[120px] sm:h-[160px] md:w-[180px] md:h-[220px] lg:w-[260px] lg:h-[260px] lg:rounded-lg overflow-hidden">
+      <img src="./images/n1.jpg" class="w-full h-full object-cover" alt="">
+      <div class="absolute inset-0 bg-black/40"></div>
+      <button class="absolute inset-0 m-auto h-fit w-fit bg-white text-black px-2 py-1 text-[10px] sm:text-xs md:text-base rounded flex items-center gap-1 shadow">
+        Shop Now <i class="fa-solid fa-arrow-right"></i>
+      </button>
+    </div>
+
+    <div class="relative w-[80px] h-[110px] sm:w-[120px] sm:h-[160px] md:w-[180px] md:h-[220px] lg:w-[260px] lg:h-[260px] lg:rounded-lg overflow-hidden">
+      <img src="./images/n7.jpg" class="w-full h-full object-cover" alt="">
+      <div class="absolute inset-0 bg-black/40"></div>
+      <button class="absolute inset-0 m-auto h-fit w-fit bg-white text-black px-2 py-1 text-[10px] sm:text-xs md:text-base rounded flex items-center gap-1 shadow">
+        Shop Now <i class="fa-solid fa-arrow-right"></i>
+      </button>
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- Most Wanted -->
+
+  <style>
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+  </style>
+
+<section class="p-3 mt-6" id="mostwanted">
+  <h1 class="font-bold text-2xl mb-4">Most Wanted</h1>
+
+
+  <div class="flex gap-3 overflow-x-auto scrollbar-hide">
+
+   
+    <div class="relative w-1/4 flex-shrink-0 h-[110px] md:w-[180px] md:h-[220px] lg:w-[260px] lg:h-[260px]">
+      <div class="absolute top-1 left-1 bg-red-500 text-white text-[10px] px-2 py-[2px] rounded z-10 md:text-2xl">
+       <p> sale</p> 
+      </div>
+
+      <div class="bg-gray-100 rounded-lg h-[120px] flex items-center justify-center md:w-[180px] md:h-[220px] lg:w-[260px] lg:h-[260px]">
+        <img src="./images/n4.jpg" class="h-full object-contain" alt="">
+      </div>
+
+      <div class="absolute bottom-2 right-2 cursor-pointer">
+        <i class="fa-regular fa-heart text-sm md:text-3xl heart-icon"></i>
+      </div>
+    </div>
+
+  
+  <div class="relative w-1/4 flex-shrink-0 h-[110px] md:w-[180px] md:h-[220px] lg:w-[260px] lg:h-[260px]">
+      <div class="absolute top-1 left-1 bg-red-500 text-white text-[10px] px-2 py-[2px] rounded z-10 md:text-2xl">
+       <p> sale</p> 
+      </div>
+
+      <div class="bg-gray-100 rounded-lg h-[120px] flex items-center justify-center md:w-[180px] md:h-[220px] lg:w-[260px] lg:h-[260px]">
+        <img src="./images/n8.jpg" class="h-full object-contain" alt="">
+      </div>
+
+      <div class="absolute bottom-2 right-2 cursor-pointer">
+        <i class="fa-regular fa-heart heart-icon text-sm md:text-3xl"></i>
+      </div>
+    </div>
+
+    <div class="relative w-1/4 flex-shrink-0 h-[110px] md:w-[180px] md:h-[220px] lg:w-[260px] lg:h-[260px]">
+      <div class="absolute top-1 left-1 bg-red-500 text-white text-[10px] px-2 py-[2px] rounded z-10 md:text-2xl">
+       <p> sale</p> 
+      </div>
+
+      <div class="bg-gray-100 rounded-lg h-[120px] flex items-center justify-center md:w-[180px] md:h-[220px] lg:w-[260px] lg:h-[260px]">
+        <img src="./images/n1.jpg" class="h-full object-contain" alt="">
+      </div>
+
+      <div class="absolute bottom-2 right-2 cursor-pointer">
+        <i class="fa-regular fa-heart text-sm md:text-3xl heart-icon"></i>
+      </div>
+    </div>
+ 
+    <div class="relative w-1/4 flex-shrink-0 h-[110px] md:w-[180px] md:h-[220px] lg:w-[260px] lg:h-[260px]">
+      <div class="absolute top-1 left-1 bg-red-500 text-white text-[10px] px-2 py-[2px] rounded z-10 md:text-2xl">
+       <p> sale</p> 
+      </div>
+
+      <div class="bg-gray-100 rounded-lg h-[120px] flex items-center justify-center md:w-[180px] md:h-[220px] lg:w-[260px] lg:h-[260px]">
+        <img src="./images/f7.jpg" class="h-full object-contain" alt="">
+      </div>
+
+          <div class="absolute bottom-2 right-2 cursor-pointer">
+        <i class="fa-regular fa-heart text-sm md:text-3xl heart-icon"></i>
+      </div>
+    </div>
+
+   <div class="relative w-1/4 flex-shrink-0 h-[110px] md:w-[180px] md:h-[220px] lg:w-[260px] lg:h-[260px]">
+      <div class="absolute top-1 left-1 bg-red-500 text-white text-[10px] px-2 py-[2px] rounded z-10 md:text-2xl">
+       <p> sale</p> 
+      </div>
+
+      <div class="bg-gray-100 rounded-lg h-[120px] flex items-center justify-center md:w-[180px] md:h-[220px] lg:w-[260px] lg:h-[260px]">
+        <img src="./images/f1.jpg" class="h-full object-contain" alt="">
+      </div>
+
+         <div class="absolute bottom-2 right-2 cursor-pointer">
+        <i class="fa-regular fa-heart text-sm md:text-3xl heart-icon"></i>
+      </div>
+    </div>
+
+
+    <div class="relative w-1/4 flex-shrink-0 h-[110px] md:w-[180px] md:h-[220px] lg:w-[260px] lg:h-[260px]">
+      <div class="absolute top-1 left-1 bg-red-500 text-white text-[10px] px-2 py-[2px] rounded z-10 md:text-2xl">
+       <p> sale</p> 
+      </div>
+
+      <div class="bg-gray-100 rounded-lg h-[120px] flex items-center justify-center md:w-[180px] md:h-[220px] lg:w-[260px] lg:h-[260px]">
+        <img src="./images/n1.jpg" class="h-full object-contain" alt="">
+      </div>
+
+         <div class="absolute bottom-2 right-2 cursor-pointer">
+        <i class="fa-regular fa-heart text-sm md:text-3xl heart-icon"></i>
+      </div>
+    </div>
+
+ 
+    <div class="relative w-1/4 flex-shrink-0 h-[110px] md:w-[180px] md:h-[220px] lg:w-[260px] lg:h-[260px]">
+      <div class="absolute top-1 left-1 bg-red-500 text-white text-[10px] px-2 py-[2px] rounded z-10 md:text-2xl">
+       <p> sale</p> 
+      </div>
+
+      <div class="bg-gray-100 rounded-lg h-[120px] flex items-center justify-center md:w-[180px] md:h-[220px] lg:w-[260px] lg:h-[260px]">
+        <img src="./images/n7.jpg" class="h-full object-contain" alt="">
+      </div>
+
+         <div class="absolute bottom-2 right-2 cursor-pointer">
+        <i class="fa-regular fa-heart text-sm md:text-3xl heart-icon"></i>
+      </div>
+    </div>
+
+
+    <div class="relative w-1/4 flex-shrink-0 h-[110px] md:w-[180px] md:h-[220px] lg:w-[260px] lg:h-[260px]">
+      <div class="absolute top-1 left-1 bg-red-500 text-white text-[10px] px-2 py-[2px] rounded z-10 md:text-2xl">
+       <p> sale</p> 
+      </div>
+
+      <div class="bg-gray-100 rounded-lg h-[120px] flex items-center justify-center md:w-[180px] md:h-[220px] lg:w-[260px] lg:h-[260px]">
+        <img src="./images/n4.jpg" class="h-full object-contain" alt="">
+      </div>
+
+         <div class="absolute bottom-2 right-2 cursor-pointer">
+        <i class="fa-regular fa-heart text-sm md:text-3xl heart-icon"></i>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Limited Offer -->
+
+<section style="background-color: #1D232C;" class="p-5 m-5 flex justify-between gap-5">
+
+  <div>
+    <img src="./images/offer.jpg" alt="" class="h-full w-full">
+  </div>
+
+
+  <div class="text-white flex flex-col gap-3 items-center justify-center">
+    
+    <div>
+   <p class="font-bold font-gabarito md:text-[70px]">Limited Offer</p>
+    <p class="text-[10px] font-semibold font-poppins md:text-[30px]">35% OFF on this for the first 30 Customers</p>
+
+    </div>
+    
+    <div>
+      <button class="inset-0 m-auto h-fit w-fit bg-white text-black px-2 py-1 text-[10px] sm:text-xs md:text-base rounded flex items-center gap-1 shadow">
+        Shop Now <i class="fa-solid fa-arrow-right"></i>
+      </button>
+    </div>
+     
+  </div>
+</section>
+
+<!-- News Letter -->
+
+<section class="mt-5 mr-4 flex flex-col justify-center items-center gap-3 font-poppins">
+   
+   <div>    <h1 class="font-bold text-xl text-center  font-gabarito md:text-[32px]">Join our News Letter</h1>
+    <p class="text-center text-[10px] font-poppins md:text-[32px] ">Signup for our email newspaper to get exclusive discounts, updates, and more</p>
+</div>
+
+    <input type="text" class="border-3 border-black px-5 py-2 w-4/5 ">
+    <button class="bg-black text-white p-2 rounded-xl text-[10px] md:text-[28px]" style="color: #E2E1E1;">Subscribe
+        <i class="fa-solid fa-arrow-right"></i>
+    </button>
+</section>
+
+
+<!-- Footer -->
+<section class="text-white text-[10px] font-gabarito flex flex-col justify-center gap-2 p-10 mt-5 md:text-[32px] md:gap-5" style="background-color: #1D232C; color: #E2E1E1;">
+   <div> 
+    <h1 class="text-lg font-bold md:text-[35px] md:font-extrabold">Nostra</h1>
+    <p>The Standard chunk of Lorem ipsum used since the 1500s is reprodused below for those interest</p>
+
+   </div>
+   
+   
+    <div class="flex gap-10">
+<i class="fa-brands fa-instagram"></i>
+<i class="fa-brands fa-twitter"></i>
+<i class="fa-brands fa-facebook"></i>
+
+    </div>
+    <p>@ 2023 Nostra.com</p>
+</section>
+</body>
+</html>
